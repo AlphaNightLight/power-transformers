@@ -1,0 +1,15 @@
+                                 LICENSE NOTICE
+
+The Apache License Version 2.0 reported at the root of the repository affects the project in
+its entirety, WITH THE EXCEPTION  of the "dataset" folder, which is licensed under
+GNU General Public License Version 3, according to the license file reported there.
+Complementarily, the latter license affects EXCLUSIVELY  the content of the "dataset" folder and its
+subfolders, without concerning the rest of the project.
+
+In particular, this folder contains the files "TTSa16-timeseries-training-VTP-summerONAF2.xlsx"
+and "TTSa-parameters.xlsx", reported from Tim Gradnik's project
+(https://gitlab.com/cigrea2.60/cigre-dttm-benchmarking-platform) without any modification.
+The files "tts-a-params.csv", "tts-a-summer.csv", "tts-a-summer-test.csv" and "tts-a-summer-train.csv"
+have been generated from the two aforementioned files and shall be considered modifications of them. 
+
+2026 Alex Pegoraro
