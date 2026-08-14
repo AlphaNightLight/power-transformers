@@ -1,4 +1,0 @@
-Top oil temperature rise in steady state at rated losses;Hotspot to top oil gradient at rated current;Average oil time constant;Winding time constant;Loss Ratio;Exponential of total losses;Winding exponent;Fitting constant 11;Fitting constant 21;Fitting constant 22
-delta_theta_or;delta_theta_hr;tau_o;tau_w;R;x;y;k_11;k_21;k_22
-K;K;min;min;[];[];[];[];[];[]
-45;35;150;7;8.0;0.8;1.3;0.5;2.0;2.0
