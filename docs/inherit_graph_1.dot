@@ -1,0 +1,24 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Module",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="train_rnn.RNN_a",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__a.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="train_rnn.RNN_abcdef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__abcdef.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="train_rnn.RNN_b",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__b.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="train_rnn.RNN_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__base.html",tooltip="The base RNN class."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="train_rnn.RNN_z",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__z.html",tooltip="RNN subclass with 1 parameter in A_prime and fixed B_prime"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="train_rnn.RNN_tot_L05",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__tot__L05.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="train_rnn.RNN_tot_L1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__tot__L1.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="train_rnn.RNN_tot_L2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtrain__rnn_1_1RNN__tot__L2.html",tooltip=" "];
+}
