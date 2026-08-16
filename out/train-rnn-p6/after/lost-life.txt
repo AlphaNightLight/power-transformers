@@ -1,0 +1,18 @@
+--- Simulation Data:
+
+dataset_path = dataset/parsed/tts-a-summer-train.csv
+params_path = dataset/parsed/tts-a-params.csv
+simulation_type = simple
+life_type = tu
+
+--- Loss of Life Metrics:
+
+MAE  = 0.82 min
+RMSE = 0.85 min
+
+--- Final Loss of Life:
+
+Reference = 15.85 min
+Model     = 14.75 min
+
+Error     = -1.09 min

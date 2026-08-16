@@ -103,9 +103,6 @@ def improve_system(
         x_pred = model.forward(test_x0, test_u, test_delta_t)  # (T, 1, 3, 1)
         y_pred = model.x_to_y(x_pred)  # (T, 1, 2, 1)
         loss = model.total_loss(y_pred, test_y_ref)
-        print(type(loss))
-        print(loss)
-        print(loss.shape)
 
         best_loss = loss
         best_A_prime = model.get_A_prime_np()

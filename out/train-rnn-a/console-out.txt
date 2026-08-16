@@ -1,0 +1,36 @@
+Torch device: cuda:0
+Torch dtype: torch.float64
+RNNFunc: RNN_a
+Network has 1 parameters, shaped:
+    torch.Size([])
+
+Training Started
+Epoch    0 | Test Loss  3.037287
+Epoch   20 | Test Loss  1.678661 | Avg Minibatch Loss  1.546039 | Avg Epoch Time  176 ms
+Epoch   40 | Test Loss  1.971497 | Avg Minibatch Loss  1.417741 | Avg Epoch Time  139 ms
+Epoch   60 | Test Loss  1.936972 | Avg Minibatch Loss  1.361307 | Avg Epoch Time  118 ms
+Epoch   80 | Test Loss  1.726284 | Avg Minibatch Loss  1.350050 | Avg Epoch Time  108 ms
+Epoch  100 | Test Loss  1.726881 | Avg Minibatch Loss  1.294142 | Avg Epoch Time   96 ms
+Epoch  120 | Test Loss  1.986309 | Avg Minibatch Loss  1.287793 | Avg Epoch Time   93 ms
+Epoch  140 | Test Loss  1.646924 | Avg Minibatch Loss  1.325311 | Avg Epoch Time   93 ms
+Epoch  160 | Test Loss  2.036282 | Avg Minibatch Loss  1.291471 | Avg Epoch Time   87 ms
+Epoch  180 | Test Loss  2.268032 | Avg Minibatch Loss  1.288849 | Avg Epoch Time   87 ms
+Epoch  200 | Test Loss  1.751520 | Avg Minibatch Loss  1.293332 | Avg Epoch Time   87 ms
+Epoch  220 | Test Loss  2.390879 | Avg Minibatch Loss  1.317425 | Avg Epoch Time   90 ms
+Epoch  240 | Test Loss  1.867663 | Avg Minibatch Loss  1.279534 | Avg Epoch Time   94 ms
+Epoch  260 | Test Loss  3.243532 | Avg Minibatch Loss  1.270113 | Avg Epoch Time   97 ms
+Epoch  280 | Test Loss  2.293896 | Avg Minibatch Loss  1.245407 | Avg Epoch Time  129 ms
+Epoch  300 | Test Loss  2.590665 | Avg Minibatch Loss  1.220731 | Avg Epoch Time  111 ms
+Epoch  320 | Test Loss  1.910574 | Avg Minibatch Loss  1.261655 | Avg Epoch Time  102 ms
+Epoch  340 | Test Loss  2.471454 | Avg Minibatch Loss  1.256688 | Avg Epoch Time   97 ms
+Epoch  360 | Test Loss  1.595958 | Avg Minibatch Loss  1.290817 | Avg Epoch Time   92 ms
+Epoch  380 | Test Loss  2.660038 | Avg Minibatch Loss  1.271144 | Avg Epoch Time   91 ms
+Epoch  400 | Test Loss  1.609809 | Avg Minibatch Loss  1.274693 | Avg Epoch Time   93 ms
+Epoch  420 | Test Loss  1.616002 | Avg Minibatch Loss  1.303014 | Avg Epoch Time   96 ms
+Epoch  440 | Test Loss  2.223384 | Avg Minibatch Loss  1.266336 | Avg Epoch Time   94 ms
+Epoch  460 | Test Loss  1.957415 | Avg Minibatch Loss  1.291271 | Avg Epoch Time   91 ms
+Epoch  480 | Test Loss  1.587264 | Avg Minibatch Loss  1.265225 | Avg Epoch Time   90 ms
+Epoch  500 | Test Loss  2.044807 | Avg Minibatch Loss  1.242015 | Avg Epoch Time   95 ms
+Training Completed Successfully
+
+Process finished with exit code 0

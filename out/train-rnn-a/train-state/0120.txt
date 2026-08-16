@@ -1,0 +1,16 @@
+--- Training State:
+
+Epoch: 120
+Test Loss: 1.986308741392176
+Avg Minibatch Loss: 1.2877934644696643
+Avg Epoch Time: 93 ms
+
+A_prime:
+[[0.         0.00294276 0.00294276]
+ [0.         0.         0.        ]
+ [0.         0.         0.        ]]
+
+B_prime:
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]

@@ -1,0 +1,17 @@
+--- Simulation Data:
+
+dataset_path = dataset/parsed/tts-a-summer.csv
+params_path = dataset/parsed/tts-a-params.csv
+simulation_type = simple
+
+--- Error Metrics:
+
+MAE  theta_o = 1.43 °C
+MAE  theta_h = 1.5 °C
+MAE  total   = 1.47 °C
+
+RMSE theta_o = 1.73 °C
+RMSE theta_h = 1.69 °C
+RMSE total   = 1.71 °C
+
+MSE  total   = 2.93 °C^2

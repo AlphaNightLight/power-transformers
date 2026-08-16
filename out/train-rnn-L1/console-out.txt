@@ -1,0 +1,22 @@
+Torch device: cuda:0
+Torch dtype: torch.float64
+RNNFunc: RNN_tot_L1
+Network has 2 parameters, shaped:
+    torch.Size([3, 3])
+    torch.Size([3, 3])
+
+Training Started
+Epoch    0 | Test Loss  3.037287
+Epoch  100 | Test Loss  1.382412 | Avg Minibatch Loss  1.249850 | Avg Epoch Time  226 ms
+Epoch  200 | Test Loss  1.374449 | Avg Minibatch Loss  1.147189 | Avg Epoch Time  219 ms
+Epoch  300 | Test Loss  1.447941 | Avg Minibatch Loss  1.146397 | Avg Epoch Time  225 ms
+Epoch  400 | Test Loss  1.353983 | Avg Minibatch Loss  1.177576 | Avg Epoch Time  209 ms
+Epoch  500 | Test Loss  2.135060 | Avg Minibatch Loss  1.147361 | Avg Epoch Time  212 ms
+Epoch  600 | Test Loss  2.081006 | Avg Minibatch Loss  1.095561 | Avg Epoch Time  213 ms
+Epoch  700 | Test Loss  1.586651 | Avg Minibatch Loss  1.114275 | Avg Epoch Time  218 ms
+Epoch  800 | Test Loss  1.237762 | Avg Minibatch Loss  1.106695 | Avg Epoch Time  211 ms
+Epoch  900 | Test Loss  1.318863 | Avg Minibatch Loss  1.048009 | Avg Epoch Time  196 ms
+Epoch 1000 | Test Loss  1.560125 | Avg Minibatch Loss  0.995823 | Avg Epoch Time  196 ms
+Training Completed Successfully
+
+Process finished with exit code 0

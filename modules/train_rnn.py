@@ -561,15 +561,15 @@ class RNN_tot_L2(RNN_base):
 
 
 
-class RNN_abcdef(RNN_base):
-    """! @brief RNN subclass with 5 parameter in <code>A_prime</code>,
-    1 parameter in <code>B_prime</code> and MSE loss
+class RNN_p6(RNN_base):
+    """! @brief RNN subclass with 4 parameters in <code>A_prime</code>,
+    2 parameters in <code>B_prime</code> and MSE loss
 
     Subclass of <code>RNN_base</code>, with the following specifications:
     \f[
-    A' = \begin{matrix} 0 & 0 & a \\ 0 & b & c \\ 0 & d & e \end{matrix}
+    A' = \begin{matrix} a & b & 0 \\ 0 & 0 & c \\ 0 & 0 & d \end{matrix}
     \qquad\qquad\qquad
-    B\ ' = \begin{matrix} 0 & f & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{matrix}
+    B\ ' = \begin{matrix} e & 0 & 0 \\ 0 & 0 & 0 \\ f & 0 & 0 \end{matrix}
     \qquad\qquad\qquad
     Loss = MSE
     \f]
@@ -624,15 +624,15 @@ class RNN_abcdef(RNN_base):
 
         ## Structure masks of parameter <code>a</code>
         self.S_a = torch.as_tensor([
-            [0., 0., 1.],
+            [1., 0., 0.],
             [0., 0., 0.],
             [0., 0., 0.]
         ]).to(device, dtype=model_type)  # (3,3)
 
         ## Structure masks of parameter <code>b</code>
         self.S_b = torch.as_tensor([
-            [0., 0., 0.],
             [0., 1., 0.],
+            [0., 0., 0.],
             [0., 0., 0.]
         ]).to(device, dtype=model_type)  # (3,3)
 
@@ -647,19 +647,138 @@ class RNN_abcdef(RNN_base):
         self.S_d = torch.as_tensor([
             [0., 0., 0.],
             [0., 0., 0.],
-            [0., 1., 0.]
+            [0., 0., 1.]
         ]).to(device, dtype=model_type)  # (3,3)
 
         ## Structure masks of parameter <code>e</code>
         self.S_e = torch.as_tensor([
+            [1., 0., 0.],
+            [0., 0., 0.],
+            [0., 0., 0.]
+        ]).to(device, dtype=model_type)  # (3,3)
+
+        ## Structure masks of parameter <code>f</code>
+        self.S_f = torch.as_tensor([
+            [0., 0., 0.],
+            [0., 0., 0.],
+            [1., 0., 0.]
+        ]).to(device, dtype=model_type)  # (3,3)
+
+
+
+    @staticmethod
+    @override
+    def get_name() -> str:
+        """! @brief <i>Override Method</i> to get the RNN name
+        @return name: string, The RNN name
+        """
+        return "RNN_p6"
+
+    @override
+    def get_A_prime(self) -> torch.tensor:
+        """! @brief <i>Override Method</i> to get <code>A_prime</code>
+        @return A_prime: torch.tensor[3,3], system matrix improvement
+        """
+        return self.S_a * self.a + self.S_b * self.b + self.S_c * self.c + self.S_d * self.d
+
+    @override
+    def get_B_prime(self) -> torch.tensor:
+        """! @brief <i>Override Method</i> to get <code>B_prime</code>
+        @return B_prime: torch.tensor[3,3], input matrix improvement
+        """
+        return self.S_e * self.e + self.S_f * self.f
+
+
+
+
+
+class RNN_p5(RNN_base):
+    """! @brief RNN subclass with 4 parameters in <code>A_prime</code>,
+    1 parameter in <code>B_prime</code> and MSE loss
+
+    Subclass of <code>RNN_base</code>, with the following specifications:
+    \f[
+    A' = \begin{matrix} a & b & 0 \\ 0 & 0 & 0 \\ 0 & c & d \end{matrix}
+    \qquad\qquad\qquad
+    B\ ' = \begin{matrix} e & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{matrix}
+    \qquad\qquad\qquad
+    Loss = MSE
+    \f]
+    """
+
+    def __init__(self,
+            A: torch.tensor, # (3,3)
+            B: torch.tensor, # (3,3)
+            CM: torch.tensor, # (2,3)
+    ):
+        """! @brief Class constructor
+        @param A: torch.tensor[3,3], system matrix
+        @param B: torch.tensor[3,3], input matrix
+        @param CM: torch.tensor[2,3], output matrix
+        """
+
+        super().__init__(A, B, CM)
+        ## Selected Loss
+        self.total_loss = self.loss_L2
+
+
+
+        ## Parameter <code>a</code>
+        self.a = nn.Parameter(
+            torch.tensor(0.).to(device, dtype=model_type)
+        )  # scalar
+
+        ## Parameter <code>b</code>
+        self.b = nn.Parameter(
+            torch.tensor(0.).to(device, dtype=model_type)
+        )  # scalar
+
+        ## Parameter <code>c</code>
+        self.c = nn.Parameter(
+            torch.tensor(0.).to(device, dtype=model_type)
+        )  # scalar
+
+        ## Parameter <code>d</code>
+        self.d = nn.Parameter(
+            torch.tensor(0.).to(device, dtype=model_type)
+        )  # scalar
+
+        ## Parameter <code>e</code>
+        self.e = nn.Parameter(
+            torch.tensor(0.).to(device, dtype=model_type)
+        )  # scalar
+
+        ## Structure masks of parameter <code>a</code>
+        self.S_a = torch.as_tensor([
+            [1., 0., 0.],
+            [0., 0., 0.],
+            [0., 0., 0.]
+        ]).to(device, dtype=model_type)  # (3,3)
+
+        ## Structure masks of parameter <code>b</code>
+        self.S_b = torch.as_tensor([
+            [0., 1., 0.],
+            [0., 0., 0.],
+            [0., 0., 0.]
+        ]).to(device, dtype=model_type)  # (3,3)
+
+        ## Structure masks of parameter <code>c</code>
+        self.S_c = torch.as_tensor([
+            [0., 0., 0.],
+            [0., 0., 0.],
+            [0., 1., 0.]
+        ]).to(device, dtype=model_type)  # (3,3)
+
+        ## Structure masks of parameter <code>d</code>
+        self.S_d = torch.as_tensor([
             [0., 0., 0.],
             [0., 0., 0.],
             [0., 0., 1.]
         ]).to(device, dtype=model_type)  # (3,3)
 
-        ## Structure masks of parameter <code>f</code>
-        self.S_f = torch.as_tensor([
-            [0., 1., 0.],
+        ## Structure masks of parameter <code>e</code>
+        self.S_e = torch.as_tensor([
+            [1., 0., 0.],
             [0., 0., 0.],
             [0., 0., 0.]
         ]).to(device, dtype=model_type)  # (3,3)
@@ -672,20 +791,20 @@ class RNN_abcdef(RNN_base):
         """! @brief <i>Override Method</i> to get the RNN name
         @return name: string, The RNN name
         """
-        return "RNN_abcdef"
+        return "RNN_p5"
 
     @override
     def get_A_prime(self) -> torch.tensor:
         """! @brief <i>Override Method</i> to get <code>A_prime</code>
         @return A_prime: torch.tensor[3,3], system matrix improvement
         """
-        return self.S_a * self.a + self.S_b * self.b + self.S_c * self.c + self.S_d * self.d + self.S_e * self.e
+        return self.S_a * self.a + self.S_b * self.b + self.S_c * self.c + self.S_d * self.d
 
     @override
     def get_B_prime(self) -> torch.tensor:
         """! @brief <i>Override Method</i> to get <code>B_prime</code>
         @return B_prime: torch.tensor[3,3], input matrix improvement
         """
-        return self.S_f * self.f
+        return self.S_e * self.e
 
 

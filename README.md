@@ -62,6 +62,24 @@ In this project, you will find the following files and folders:
   - `train_utils.py`: python module defining the functions used in the training process.
 
 - `out/`: folder reporting the outputs of some relevant simulations.
+  - `simulation-full/`: simulation run on the full dataset.
+  - `simulation-iec-kalman/`: simulation on the test dataset with a Kalman Filter.
+  - `simulation-iec-observer/`: simulation on the test dataset with a Luemberger Observer.
+  - `simulation-iec-simple/`: simulation on the test dataset with no improvement.
+  - `simulation-rnn-a-simple/`: simulation on the test dataset with the improvements obtained from `RNN_a`.
+  - `simulation-rnn-b-simple/`: simulation on the test dataset with the improvements obtained from `RNN_b`.
+  - `simulation-rnn-L1-simple/`: simulation on the test dataset with the improvements obtained from `RNN_tot_L1`.
+  - `simulation-rnn-L2-simple/`: simulation on the test dataset with the improvements obtained from `RNN_tot_L2`.
+  - `simulation-rnn-p5-simple/`: simulation on the test dataset with the improvements obtained from `RNN_p5`.
+  - `simulation-rnn-p6-kalman/`: simulation with the improvements obtained from `RNN_p6` and a Kalman Filter.
+  - `simulation-rnn-p6-observer/`: simulation with the improvements obtained from `RNN_p6` and a Luemberger Observer.
+  - `simulation-rnn-p6-simple/`: simulation on the test dataset with the improvements obtained from `RNN_p6`.
+  - `train-rnn-a/`: training with the `RNN_a` network.
+  - `train-rnn-b/`: training with the `RNN_b` network.
+  - `train-rnn-L1/`: training with the `RNN_tot_L1` network.
+  - `train-rnn-L2/`: training with the `RNN_tot_L2` network.
+  - `train-rnn-p5/`: training with the `RNN_p5` network.
+  - `train-rnn-p6/`: training with the `RNN_p6` network.
 
 - `.gitignore`: to ignore temporary folders in version controlling.
 - `Doxyfile`: configuration file for the Doxygen documentation.
