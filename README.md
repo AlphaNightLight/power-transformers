@@ -32,7 +32,36 @@ contained in the `dataset/` folder. The reason is that this folder contains extr
 
 ## Thesis Abstract
 
-Abstract goes here.
+Power Transformers are critical elements of the electrical network; the elevate
+temperatures they reach while processing current can provoke an excessive
+degradation of their most delicate components, resulting in premature system
+aging. Hence, it is of crucial importance to properly model the evolution of the
+*hotspot temperature* reached by the machine, in order to estimate the associated
+*loss of life* and optimize the maintenance schedule accordingly. The project
+begins with the implementation of the "IEC Model", a popular mathematical
+representation of Power Transformer's thermal behavior, and tests the efficacy
+of possible improvement techniques that do not compromise the simplicity of
+the model.
+
+From the field of *Control Theory* the Luenberger Observer and Kalman
+Filter are tested. They have an extremely similar effect on the system, and
+cause an error reduction of -65% over the Mean Absolute Error (MAE) and
+of -53% over the Root Mean Square Error (RMSE). On the other hand,
+the Recurrent Neural Network is selected to represent the field of *Machine Learning*.
+Six architecture are tested, and the most effective one gains
+a reduction of -48% over the MAE and -45% over the RMSE. Finally,
+the two domains are fused into an hybrid approach which obtains the best
+performance, -75% over MAE and -66% over RMSE, demonstrating that
+different techniques can be stacked without one shadowing the effects of the
+other.
+
+The research leaves space for many types of continuations, including
+the employment of simulation algorithms guaranteeing better numerical
+precision, the implementation on physical Power Transformer machines, and
+the experimentation of additional Recurrent Neural Network Architectures.
+
+**Keywords**: Power transformers, State estimation, Machine learning, Recurrent neural
+networks, Control theory, State observers, Kalman filters
 
 ## Files in This Repository
 
@@ -48,8 +77,9 @@ In this project, you will find the following files and folders:
 - `docs/`: output folder for the Doxygen documentation.
 
 - `info/`: folder containing additional information about the project.
-  - `power_transformers.pptx`: Power Point presentation of the project.
-  - `thesis.pdf`: the thesis file, which act also as a project report.
+  - `Alex Pegoraro - Thesis Presentation.pdf`: the slide presentation of the project.
+  - `Alex Pegoraro - KTH Thesis.pdf`: the thesis file (with KTH frontispiece), which act also as a project report.
+  - `Alex Pegoraro - UniTN Thesis.pdf`: the thesis file (with UniTN frontispiece), which act also as a project report.
 
 - `modules/`: folder containing all the python modules employed for training and simulation.
   - `control.py`: python module defining the functions regarding the deterministic control theory aspects.
