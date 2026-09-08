@@ -10,6 +10,9 @@
 6. [How to Run the Simulation Process](#how-to-run-the-simulation-process)
 7. [How to Run the Training Process](#how-to-run-the-training-process)
 
+Full Doxygen documentation available at the project's GitHub Pages:
+[https://alphanightlight.github.io/power-transformers](https://alphanightlight.github.io/power-transformers)
+
 ## Project Overview
 
 This repository contains my Master Thesis' Project, conducted at the **Royal Institute of Technology of Stockholm**
@@ -47,13 +50,13 @@ From the field of *Control Theory* the Luenberger Observer and Kalman
 Filter are tested. They have an extremely similar effect on the system, and
 cause an error reduction of -65% over the Mean Absolute Error (MAE) and
 of -53% over the Root Mean Square Error (RMSE). On the other hand,
-the Recurrent Neural Network is selected to represent the field of *Machine Learning*.
-Six architecture are tested, and the most effective one gains
-a reduction of -48% over the MAE and -45% over the RMSE. Finally,
+the Recurrent Neural Network is selected to represent the field of
+*Machine Learning*. Six architecture are tested, and the most effective one
+gains a reduction of -48% over the MAE and -45% over the RMSE. Finally,
 the two domains are fused into an hybrid approach which obtains the best
 performance, -75% over MAE and -66% over RMSE, demonstrating that
-different techniques can be stacked without one shadowing the effects of the
-other.
+different techniques can be stacked without one shadowing the effects of
+the other.
 
 The research leaves space for many types of continuations, including
 the employment of simulation algorithms guaranteeing better numerical
